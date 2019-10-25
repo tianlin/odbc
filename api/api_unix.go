@@ -8,7 +8,8 @@
 package api
 
 // #cgo darwin LDFLAGS: -lodbc
-// #cgo linux LDFLAGS: -lodbc
+// #cgo linux LDFLAGS: -lodbc -L /usr/local/lib
+// #cgo linux CFLAGS: -I/usr/local/include
 // #cgo freebsd LDFLAGS: -L /usr/local/lib -lodbc
 // #cgo freebsd CFLAGS: -I/usr/local/include
 // #include <sql.h>
