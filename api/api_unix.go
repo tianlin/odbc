@@ -8,12 +8,11 @@
 package api
 
 // #cgo darwin LDFLAGS: -lodbc
-// #cgo linux LDFLAGS: -lodbc -L /usr/local/lib
-// #cgo linux CFLAGS: -I/usr/local/include
+// #cgo linux LDFLAGS: -lodbc
 // #cgo freebsd LDFLAGS: -L /usr/local/lib -lodbc
 // #cgo freebsd CFLAGS: -I/usr/local/include
-// #include <sql.h>
-// #include <sqlext.h>
+// #include "/usr/include/sql.h"
+// #include "/usr/include/sqlext.h"
 // #include <stdint.h>
 /*
 SQLRETURN sqlSetEnvUIntPtrAttr(SQLHENV environmentHandle, SQLINTEGER attribute, uintptr_t valuePtr, SQLINTEGER stringLength) {
